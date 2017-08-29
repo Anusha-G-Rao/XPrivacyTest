@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="anusha.test.xprivaxy.de.xprivacytest.MainActivity">
 
-    <TextView
-        android:id="@+id/imei_holder"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/imei_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imei_nbr"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:id="@+id/imei_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/http_call_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HTTP Call"
+        android:textAllCaps="false"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/http_response_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="Results of Http Call"/>
+
+    </ScrollView>
+
+</LinearLayout>
